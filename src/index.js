@@ -1,3 +1,4 @@
+import {Layer} from './Layer'
 import './index.html';
 import './style.css';
 
@@ -31,4 +32,14 @@ for (let i = 0; i < orderBtn.length; i++) {
       }
     }
   });
+}
+const ingredients = [
+  { color: '#feeeca', label: 'mléčná pěna' },
+  { color: '#fed7b0', label: 'teplé mléko' },
+  { color: '#613916', label: 'espresso' },
+];
+
+const drinkInfo = document.querySelector('.drink__info');
+for (let k = 0; k < ingredients.length; k++) {
+  drinkInfo.appendChild(Layer(ingredients[k]));
 }
